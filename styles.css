@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Garamond', serif;
+    color: #e0e0e0;
+    background-color: #111;
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #f4a261;
+    text-shadow: 2px 2px 4px #000;
+    margin-top: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+main {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f4a261;
+    text-shadow: 1px 1px 3px #000;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #ffc107;
+    border: 2px solid #f4a261;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, transform 3s ease-in-out;
+    transform-origin: center;
+}
+
+.cta-button:hover {
+    background-color: #f4a261;
+    color: #111;
+}
+
+.cta-button.move-and-zoom {
+    position: absolute;
+    transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: center center;
+}
+
+.cta-button.zoom-in {
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%)) scale(1000);
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-color: #111;
+}
+
+.firecamp {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1000);
+    transition: transform 3s ease-in-out;
+    transform-origin: center center;
+}
+
+.firecamp.zoom-out {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.caveman {
+    width: 120px;
+    height: auto;
+    right: -200px;
+    transition: transform 1s ease-in-out;
+}
+
+.zoomed-in {
+    transform: scale(1000);
+    filter: hue-rotate(60deg) brightness(1.5);
+}
+
+.zoomed-out {
+    transform: scale(1);
+}
+
+.attack {
+    content: url('basicattack1.png');
+    transform: translateX(-50px);
+}
